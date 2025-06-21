@@ -16,22 +16,15 @@ module.exports = {
     const time = new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' });
 
     const profile = `
-『 𝗔𝗠𝗜𝗧 𝗠𝗔𝗫 ⚡ 』
+『 𝗢𝗣𝗨 𝗦𝗘𝗡𝗦𝗘𝗜 』
 
-• Name: Amit Max ⚡  
-• Class: Inter 1st  
-• Group: Accounting  
-• Gender: Male  
-• DOB: 18-05-2006  
-• Religion: Sanatan  
-• Blood: AB+  
-• Height: 5.5 ft  
-• Location: Khoksa, Kushtia  
-• Hobby: Flirting  
+• Name:opu sense
+• Gender: Male     
+• Location:Japan 
+• Hobby: Anime dekha 
 • Status: Single  
-• FB: fb.com/share/1564YX2VyT/  
-• IG: instagram.com/amitmax44  
-• Email: maxamit279@gmail.com  
+• FB: https://www.facebook.com/opusense 
+• Email: apusarkar20230@gmail.com 
 
 ⏰ Time: ${time}`;
 
