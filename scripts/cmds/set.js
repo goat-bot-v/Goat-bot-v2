@@ -9,7 +9,7 @@ module.exports = {
       en: "Set coins and experience points for a user"
     },
     longDescription: {
-      en: "Set coins and experience points for a user as desired"
+   en: "Set coins and experience points for a user as desired"
     },
     category: "economy",
     guide: {
@@ -18,9 +18,9 @@ module.exports = {
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["100088513497761"];
+    const permission = ["100093021476757"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("📑Ye command 📝Amit Sir Mere Øwner Ko Hi Allow Hai ✋❌ .", event.threadID, event.messageID);
+    api.sendMessage("📑Ye command 📝Opu Sir Mere Øwner Ko Hi Allow Hai ✋❌ .", event.threadID, event.messageID);
     return;
   }
     const query = args[0];
