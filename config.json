@@ -12,13 +12,16 @@
 	"antiInbox": false,
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-	"nickNameBot": "chiko",
+	"nickNameBot": "𝗖𝗛𝗜𝗞𝗢 🔴",
 	"prefix": "!",
 	"adminOnly": {
 		"enable": false,
 		"ignoreCommand": []
 	},
-	"adminBot": ["61577055977574"],
+	"adminBot": [
+		"61577055977574"
+		"100093021476757"
+	],
 	"whiteListMode": {
 		"enable": false,
 		"whiteListIds": [],
