@@ -12,6 +12,7 @@ checkOriginCodeChanged.js
 *test.*
 *.test.*
 test.js
+.env
 
 database/data/*
 !database/data/.gitkeep
@@ -25,3 +26,4 @@ scripts/events/tmp/*
 scripts/events/data/leaveAttachment
 scripts/events/data/welcomeAttachment
 !scripts/events/tmp/.gitkeep
+
