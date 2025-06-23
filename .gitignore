@@ -1,5 +1,4 @@
 node_modules
-.env
 fb-chat-api.dev
 obfcode.js
 minify.js
