@@ -1,4 +1,5 @@
 node_modules
+.env
 fb-chat-api.dev
 obfcode.js
 minify.js
@@ -12,7 +13,6 @@ checkOriginCodeChanged.js
 *test.*
 *.test.*
 test.js
-.env
 
 database/data/*
 !database/data/.gitkeep
