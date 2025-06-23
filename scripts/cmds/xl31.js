@@ -16,7 +16,7 @@ module.exports = {
     const prompt = args.join(" ");
     if (!prompt) return message.reply("📌 অনুগ্রহ করে কী ছবি বানাতে চাও তা লিখো।\nউদাহরণ: xl31 একটি বৃষ্টির দিনে গ্রামে হাঁটা ছেলে");
 
-    const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=fluxpro`;
+    const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=xl31`;
 
     try {
       message.reply({
