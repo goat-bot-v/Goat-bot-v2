@@ -6,9 +6,9 @@ module.exports.config = {
   name: "fluxultra",
   version: "1.0",
   role: 0,
-  author: "xrotick🥀",
+  author: "opu",
   description: "Generate AI image using FluxUltra",
-  category: "img-gen",
+  category: "image",
   guide: "{pn} [prompt]\nExample: {pn} a cute dog with sunglasses",
   countDown: 15,
 };
