@@ -7,12 +7,12 @@ module.exports = {
     name: "nijix",
     aliases: ["niji", "animegen"],
     version: "1.0",
-    author: "sasuke roy",
+    author: "opu",
     countDown: 5,
     role: 0,
     shortDescription: "Anime image generator (Niji style)",
     longDescription: "Generate anime-style image using Niji・Journey (niji anime) by prompt",
-    category: "ai",
+    category: "image",
     guide: {
       en: "{pn} <anime style prompt>\nExample: {pn} fox girl in kimono under cherry blossom"
     }
