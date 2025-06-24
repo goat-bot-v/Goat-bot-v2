@@ -3,12 +3,12 @@ module.exports = {
     name: "xl31",
     aliases: ["aiimage", "ximg"],
     version: "1.0",
-    author: "sasuke_roy",
+    author: "opu",
     countDown: 5,
     role: 0,
     shortDescription: "Xl31 AI দিয়ে ছবি বানাও",
     longDescription: "তোমার দেওয়া প্রম্পট অনুযায়ী FluxPro model ব্যবহার করে AI ছবি বানাবে",
-    category: "ai",
+    category: "image",
     guide: "{pn} <প্রম্পট>"
   },
 
@@ -16,7 +16,7 @@ module.exports = {
     const prompt = args.join(" ");
     if (!prompt) return message.reply("📌 অনুগ্রহ করে কী ছবি বানাতে চাও তা লিখো।\nউদাহরণ: xl31 একটি বৃষ্টির দিনে গ্রামে হাঁটা ছেলে");
 
-    const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=xl31`;
+    const imageUrl =`https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=xl31`;
 
     try {
       message.reply({
