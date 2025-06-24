@@ -1,46 +1,39 @@
-const axios = require("axios");
-
-module.exports = {
-  config: {
-    name: "pin",
-    aliases: ["pinterest", "pinimg"],
-    version: "1.0",
-    author: "sasuke roy",
-    countDown: 3,
-    role: 0,
-    shortDescription: "Get image from Pinterest",
-    longDescription: "Search and send a Pinterest image by keyword",
-    category: "image",
-    guide: {
-      en: "{pn} <keyword>\nExample: {pn} anime girl"
-    }
-  },
-
-  onStart: async function () {},
-
-  onMessage: async function ({ event, args, message }) {
-    const keyword = args.join(" ");
-    if (!keyword) return message.reply("🔎 দয়া করে কোনো কীওয়ার্ড দাও!\nউদাহরণ: /pin cute cat");
-
-    const loadingMsg = await message.reply(`🔍 "${keyword}" এর জন্য Pinterest থেকে ছবি আনা হচ্ছে...`);
-
-    try {
-      const res = await axios.get(`https://api-samir.onrender.com/pinterest?search=${encodeURIComponent(keyword)}`);
-      const images = res.data?.data;
-
-      if (!images || images.length === 0)
-        return message.reply("😔 কিছুই পাওয়া যায়নি Pinterest-এ!");
-
-      // র‍্যান্ডম ছবি বাছাই
-      const randomImage = images[Math.floor(Math.random() * images.length)];
-
-      return message.reply({
-        body: `📌 Pinterest Image for: "${keyword}"`,
-        attachment: await global.utils.getStreamFromURL(randomImage)
-      });
-    } catch (err) {
-      console.error(err);
-      return message.reply("❌ Pinterest থেকে ছবি আনতে সমস্যা হচ্ছে!");
-    }
-  }
+module.exports.config = {
+ name: "pin",
+ version: "1.0.0",
+ hasPermssion: 0,
+ credits: "opu sense",
+ description: "Image search",
+ commandCategory: "image",
+ usages: "[Text]",
+ cooldowns: 0,
+};
+module.exports.run = async function({ api, event, args }) {
+ const axios = require("axios");
+ const fs = require("fs-extra");
+ const request = require("request");
+ const keySearch = args.join(" ");
+ const apis = await axios.get('https://raw.githubusercontent.com/shaonproject/Shaon/main/api.json')
+ const Shaon = apis.data.api
+ 
+ if(keySearch.includes("-") == false) return api.sendMessage('Please enter in the format, example: pic mia khalifa-10 (it depends on you how many images you want to appear in the result) credit by —͟͟͞͞𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️', event.threadID, event.messageID)
+ const keySearchs = keySearch.substr(0, keySearch.indexOf('-'))
+ const numberSearch = keySearch.split("-").pop() || 6
+ const res = await axios.get(`${Shaon}/pinterest?search=${encodeURIComponent(keySearchs)}`);
+ const data = res.data.data;
+ var num = 0;
+ var imgData = [];
+ for (var i = 0; i < parseInt(numberSearch); i++) {
+ let path = __dirname + `/cache/${num+=1}.jpg`;
+ let getDown = (await axios.get(`${data[i]}`, { responseType: 'arraybuffer' })).data;
+ fs.writeFileSync(path, Buffer.from(getDown, 'utf-8'));
+ imgData.push(fs.createReadStream(__dirname + `/cache/${num}.jpg`));
+ }
+ api.sendMessage({
+ attachment: imgData,
+ body: numberSearch + ' Searching 🔎 results for you. Your keyword: '+ keySearchs
+ }, event.threadID, event.messageID)
+ for (let ii = 1; ii < parseInt(numberSearch); ii++) {
+ fs.unlinkSync(__dirname + `/cache/${ii}.jpg`)
+ }
 };
