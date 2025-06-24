@@ -7,14 +7,14 @@ module.exports = {
     name: "genx",
     aliases: [],
     version: "1.0",
-    author: "Vex_Kshitiz",
+    author: "opu",
     countDown: 50,
     role: 0,
     longDescription: {
       vi: '',
       en: "Generate images"
     },
-    category: "ai",
+    category: "image",
     guide: {
       vi: '',
       en: "{pn} <prompt>"
