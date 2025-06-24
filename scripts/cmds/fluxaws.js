@@ -3,12 +3,12 @@ module.exports = {
     name: "fluxaws",
     aliases: ["awsgen", "faws"],
     version: "1.1.0",
-    author: "TawsiN",
+    author: "opu",
     countDown: 5,
     role: 0,
     shortDescription: "Generate an AI image with FluxAWS",
     longDescription: "Generate a high-quality AI image using the FluxAWS API (Powered by Arch2Devs).",
-    category: "𝗜𝗠𝗔𝗚𝗘 𝗚𝗘𝗡𝗘𝗥𝗔𝗧𝗢𝗥",
+    category: "image",
     guide: "{pn} <prompt>\nReply to a message with {pn} to use it as a prompt."
   },
 
