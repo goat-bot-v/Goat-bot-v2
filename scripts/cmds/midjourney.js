@@ -24,7 +24,7 @@ module.exports = {
     name: 'mj',
     aliases: ["midjourney"],
     version: '1.0',
-    author: 'Amit Max ⚡',
+    author: 'opu ⚡',
     countDown: 15,
     role: 0,
     shortDescription: 'Generate an image using Midjourney (might be unstable).',
