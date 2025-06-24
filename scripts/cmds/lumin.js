@@ -6,12 +6,12 @@ module.exports = {
   config: {
     name: "lumin",
     version: "1.0",
-    author: "Amit Max ⚡",
+    author: "opu ⚡",
     countDown: 5,
     role: 0,
     shortDescription: "Generate Luminarium style AI image",
     longDescription: "Generate an AI image using Oculux Luminarium API.",
-    category: "𝗜𝗠𝗔𝗚𝗘 𝗚𝗘𝗡𝗘𝗥𝗔𝗧𝗢𝗥",
+    category: "image",
     guide: {
       en: "{pn} <prompt>",
     },
