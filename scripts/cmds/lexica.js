@@ -5,12 +5,12 @@ module.exports = {
     name: "lexica",
     aliases: [],
     version: "1.0",
-    author: "GoatBot",
+    author: "opu",
     countDown: 5,
     role: 0,
     shortDescription: "AI image from prompt",
     longDescription: "Generate AI image using prompt via Lexica.art",
-    category: "ai",
+    category: "image",
     guide: "{pn} [prompt]"
   },
 
