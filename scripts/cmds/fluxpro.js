@@ -3,12 +3,12 @@ module.exports = {
     name: "fluxpro",
     aliases: ["fluxai", "hdimg"],
     version: "1.0",
-    author: "sasuke_roy",
+    author: "opu",
     countDown: 5,
     role: 0,
     shortDescription: "FluxPro দিয়ে AI ছবি বানাও",
     longDescription: "তোমার লেখা অনুযায়ী FluxPro মডেল দিয়ে হাই কোয়ালিটি ছবি বানাবে",
-    category: "image gen",
+    category: "image",
     guide: "{pn} <প্রম্পট>"
   },
 
